@@ -1,4 +1,4 @@
-import re, sys, os
+import re
 
 """
 Write a program that turns a sentence into camel case. The first word is lowercase, the rest of the words have their
