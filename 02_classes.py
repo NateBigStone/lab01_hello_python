@@ -5,7 +5,7 @@ Print all the items in the list, one per line.
 """
 
 def classes(more_classes="y",class_list=[]):
-    #Runs with Python3.8 I decided to try the wildest solution I could dream up
+    #Wild experiment using recursion. Not very readable, but v concise.
     class_list.append(input("Enter a name of a class you are taking this semester:\n"))
     print("\n".join(class_list)) if input("Do you have more classes to enter? (y/N):\n").strip().lower() == "n" \
     else classes(more_classes,class_list)
