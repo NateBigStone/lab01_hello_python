@@ -16,9 +16,9 @@ def birthday():
     #Get month as a name and just the first three letters
     today_word = today.strftime("%B").lower()[:3]
     #User enters their name
-    name = raw_input("Please enter your name:\n")
+    name = input("Please enter your name:\n")
     #User enters their birthday month
-    birthday_month = raw_input("Please enter your birthday month:\n")
+    birthday_month = input("Please enter your birthday month:\n")
     #Convert birthday input to string and lowercase
     str(birthday_month).lower()
     #Get the length of the user's name
@@ -28,10 +28,10 @@ def birthday():
     #Print the person's name
     print("Hello " + name + "!")
     #Wish the person a happy birthday if their birthday month is this month
-    if today_word in str(birthday_month).lower() or today_number is birthday_month:
+    if today_word in str(birthday_month).lower() or today_number == birthday_month:
         print("Happy Birthday Month!")
     #Print the length of the user's name
-    print("There are " + length_string + " letters in your name")
+    print(f"There are {length_string} letters in your name")
 
 
 if __name__ == "__main__":
