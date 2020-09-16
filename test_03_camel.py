@@ -10,8 +10,8 @@ class TestCamelCase(TestCase):
         self.assertEqual('whatIsTheMeaningOfLife', camel.camel('What is the Meaning of Life'))
 
     def test_camelcase_special_characters(self):
-        self.assertIn('TypeError', camel.camel('Hello world***'))
-        self.assertIn('TypeError', camel.camel('$pecia! C%aracters'))
-        self.assertIn('TypeError', camel.camel(882424824825))
-
-
+        self.assertIn('ValueError', camel.camel('Hello world***'))
+        self.assertIn('ValueError', camel.camel('$pecia! C%aracters'))
+        self.assertIn('ValueError', camel.camel('882424824825'))
+        with self.assertRaises(TypeError):
+            camel.camel(882424824825)
